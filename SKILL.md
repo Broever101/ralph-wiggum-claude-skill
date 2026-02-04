@@ -303,9 +303,9 @@ This file tracks progress across Ralph loop iterations.
 
 ## Step 4.5: Set Up Feedback Loop (IMPORTANT)
 
-The agent needs a way to verify its work visually. Choose ONE method:
+The agent needs a way to verify its work visually.
 
-### Option A: Playwright MCP (Recommended for Bash Loop)
+### Playwright MCP (Recommended)
 Create `.mcp.json` in project root:
 ```json
 {
@@ -318,9 +318,6 @@ Create `.mcp.json` in project root:
 }
 ```
 Create screenshots directory: `mkdir screenshots`
-
-### Option B: Claude for Chrome (For Plugin Method)
-Run `/chrome` in Claude Code and enable the integration.
 
 ---
 
@@ -378,10 +375,6 @@ The loop will automatically exit when:
 - Ensure max iterations is set
 - Check completion phrase is output correctly
 - Review plan.md for ambiguous tasks
-
-**Context fills up (plugin method):**
-- Switch to bash loop method for fresh context per iteration
-- Or manually compact and restart
 
 **Port already in use:**
 ```bash

@@ -41,6 +41,10 @@ Now you can invoke it with: `/ralph-setup`
 
 ## Quick Start
 
+### 0. Disable Existing Ralph Plugin (Important)
+
+If you have any existing Ralph Wiggum plugin installed in Claude Code, **disable it** before using this skill. The plugin method can conflict with the bash loop approach and cause issues. This skill uses a bash-based loop which is more reliable.
+
 ### 1. Enable Sandbox (Critical)
 
 Create or edit `.claude/settings.json` in your project:
@@ -99,7 +103,8 @@ chmod +x ralph.sh
 ## Requirements
 
 - **Sandbox enabled** - Required for autonomous execution
-- **Feedback loop** - Playwright MCP or Claude for Chrome for visual verification
+- **Disable existing Ralph plugin** - Avoid conflicts with the bash loop method
+- **Playwright MCP** - For visual verification (optional but recommended)
 - **Clear goals** - Well-defined tasks in `plan.md`
 - **Max iterations** - Always set to prevent runaway costs
 
@@ -118,7 +123,7 @@ See the `/examples` directory for template files:
 | Permission prompts | Enable sandbox and set `autoAllowBashIfSandboxed: true` |
 | Port already in use | `lsof -ti :PORT \| xargs kill -9` |
 | Agent gets stuck | Always set max iterations; check plan.md for ambiguity |
-| Context fills up | Bash loop method (default) uses fresh context per iteration |
+| Plugin conflicts | Disable any existing Ralph Wiggum plugin in Claude Code |
 
 ### Completion Promise Matching
 
