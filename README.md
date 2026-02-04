@@ -31,7 +31,7 @@ cd ~/.claude/skills/
 git clone https://github.com/Broever101/ralph-wiggum-claude-skill.git ralph-wiggum
 ```
 
-Now you can invoke it with: `/ralph-setup`
+Now you can invoke it with: `/ralph-loop`
 
 ### Option 2: Manual Install
 
@@ -69,7 +69,7 @@ Or simply run `/sandbox` in Claude Code.
 In your project directory:
 
 ```
-/ralph-setup
+/ralph-loop
 ```
 
 This creates:

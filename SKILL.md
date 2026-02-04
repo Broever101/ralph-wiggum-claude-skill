@@ -1,5 +1,5 @@
 ---
-name: ralph-setup
+name: ralph-loop
 description: Set up Ralph Wiggum loop for autonomous iterative development
 arguments:
   - name: max_iterations
