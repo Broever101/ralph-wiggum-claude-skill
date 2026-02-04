@@ -1,5 +1,7 @@
 # Ralph Wiggum Claude Skill
 
+> I got tired of pointing to online guides or explaining what Ralph Wiggum is over and over again. So I made this script. All you have to do is run the command, give it a task, and it converts that into a Ralph loop automatically.
+
 A [Claude Code](https://claude.ai/code) skill that sets up autonomous iterative development loops using the Ralph Wiggum technique.
 
 ## What is Ralph Wiggum?
@@ -112,10 +114,21 @@ See the `/examples` directory for template files:
 
 | Issue | Solution |
 |-------|----------|
+| **Loop won't exit** | Make sure the completion promise in `PROMPT.md` matches the one in `ralph.sh` |
 | Permission prompts | Enable sandbox and set `autoAllowBashIfSandboxed: true` |
 | Port already in use | `lsof -ti :PORT \| xargs kill -9` |
 | Agent gets stuck | Always set max iterations; check plan.md for ambiguity |
 | Context fills up | Bash loop method (default) uses fresh context per iteration |
+
+### Completion Promise Matching
+
+The bash script (`ralph.sh`) checks for specific completion promises to exit. Make sure the promise in your `PROMPT.md` matches one of these defaults:
+
+- `<promise>COMPLETE</promise>` (default)
+- `<promise>DONE</promise>`
+- `<promise>FINISHED</promise>`
+
+Or if using a custom promise, update both `PROMPT.md` and the `COMPLETION_PROMISE` variable in `ralph.sh`.
 
 ## References
 
