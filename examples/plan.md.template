@@ -1,0 +1,64 @@
+# [Project Name] - Ralph Loop Task List
+
+## Overview
+[Brief project description - what are we building?]
+
+**Success Gate:** [Define what "complete" means - e.g., "All tests pass and feature works as specified"]
+
+---
+
+## Task List
+
+```json
+[
+  {
+    "category": "setup",
+    "description": "Example: Initialize project dependencies",
+    "steps": [
+      "Install npm packages",
+      "Set up environment variables",
+      "Verify installation"
+    ],
+    "passes": false
+  },
+  {
+    "category": "feature",
+    "description": "Example: Implement core feature",
+    "steps": [
+      "Create component file",
+      "Add API endpoint",
+      "Test functionality"
+    ],
+    "passes": false
+  },
+  {
+    "category": "testing",
+    "description": "Example: Test all endpoints",
+    "steps": [
+      "Test GET endpoint",
+      "Test POST endpoint",
+      "Verify responses"
+    ],
+    "passes": false
+  }
+]
+```
+
+---
+
+## Completion Criteria
+- [ ] All tasks have `"passes": true`
+- [ ] All tests pass
+- [ ] Documentation complete
+
+---
+
+## Project Structure
+
+```
+[Add your project structure diagram here]
+```
+
+## Known Issues
+
+[Document any known issues or workarounds]

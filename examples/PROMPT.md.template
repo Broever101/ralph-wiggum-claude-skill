@@ -1,0 +1,59 @@
+@plan.md @activity.md
+
+We are [PROJECT GOAL - e.g., "building and testing a dashboard application"].
+
+**CRITICAL: AUTONOMOUS EXECUTION ENABLED**
+- You have FULL permissions to execute ALL bash commands autonomously
+- Run curl, npm, tests - everything yourself
+- DO NOT ask for permission - just execute
+- DO NOT say "manual verification required" - execute and verify yourself
+
+**IMPORTANT: ALL SERVICES ARE ALREADY RUNNING**
+- Port 8000: [Your Service Name]
+- Port 3000: [Your Frontend, if applicable]
+
+**DO NOT START SERVICES** - they are already running. If you need to restart a service, first kill the existing process:
+```bash
+lsof -ti :<PORT> | xargs kill -9 2>/dev/null
+```
+
+**First read activity.md to see what was recently accomplished.**
+
+**Then open plan.md and choose the SINGLE highest priority task where "passes" is false.**
+
+**For TESTING tasks (category: "testing"):**
+1. Run the test command yourself
+2. Verify the result
+3. Take screenshots if using Playwright MCP
+4. Document what passed/failed in activity.md
+5. Update that task's "passes" field from false to true
+6. Make one git commit with clear message
+
+**For FEATURE tasks (category: "feature"):**
+1. Read the task description and all steps
+2. **EXECUTE** all commands yourself (create files, run npm, install deps)
+3. **VERIFY** everything works before moving on
+4. Append a dated progress entry to activity.md
+5. Update that task's "passes" field in plan.md from false to true
+6. Make one git commit for that task only
+
+**ONLY WORK ON A SINGLE TASK PER ITERATION.**
+
+**DO NOT run git init, do not change git remotes, and do not push.**
+
+When ALL tasks in plan.md have "passes": true, output exactly:
+
+<promise>COMPLETE</promise>
+
+---
+
+## Testing Commands Reference
+
+[Add project-specific test commands here, e.g.]
+- Run tests: `npm test`
+- Start server: `npm run dev`
+- Lint: `npm run lint`
+
+## High Priority Tasks
+
+[List any high-priority tasks or blockers if needed]
